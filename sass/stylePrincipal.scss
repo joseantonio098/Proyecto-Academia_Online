@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.contenedor{
+    width: 1200px; 
+    margin: auto;
+}
+
+// ---------------------------Fuentes de estilos ---> Sass
+@font-face{
+    font-family: "YanoneKaffeesatz-Regular";
+    src: url('../fonts/YanoneKaffeesatz-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Bangers-Regular";
+    src: url('../fonts/Bangers-Regular.ttf');
+}
+
+@font-face{
+    font-family: "VastShadow-Regular";
+    src: url('../fonts/VastShadow-Regular.ttf');
+}
+
+//-----------------------Estilos del boton Principal-----> 
+@mixin styleBoton($longitudBoton,$margenTopBoton) {
+    padding: $longitudBoton;
+    margin-top: $margenTopBoton;
+    width: 200px;
+    border: none;
+    background-color: rgb(211, 48, 48);
+    box-shadow: 0px 0px 8px 5px rgb(202, 202, 202);
+    color: #fff;
+    cursor: pointer;
+    font-family: 'YanoneKaffeesatz-Regular', sans-serif;
+    font-size: 20px;
+    &:hover{
+        background-color: rgb(211, 48, 48);
+        box-shadow: 0px 0px 4px 2px rgb(235, 235, 235);
+    }
+    &:focus{
+        outline: none;
+    }    
+}
+// ---------------------------Importamos los estilos ---> Sass
+@import "menuNavegacion";
+@import "mainPrincipal";
+@import "mainSecundario";
+@import "asidePrincipal";
+
+
+.redes-sociales{
+    position: fixed;
+    top: 40%;
+    left: 0;
+    .red-social{
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 52px;
+            height: 52px;
+            cursor: pointer;
+            transition: all 1s ease;
+            &:hover{
+                transform: scale(.8,.8);
+            }
+        }
+    }
+}
+
+footer{
+    background-image: url('../img/denim.png');
+    min-width: 1200px;
+    p{
+        text-align: center;
+        color: white;
+        padding: 24px 0px;
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+nav {
+  width: 100%;
+  height: 85px;
+  z-index: 10;
+  -webkit-box-shadow: 2px 0px 3px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  min-width: 1200px;
+}
+
+nav .menu-navegacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+nav .menu-navegacion .logotipo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .menu-navegacion .logotipo img {
+  width: 350px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+nav .menu-navegacion .menu-listas {
+  height: 85px;
+}
+
+nav .menu-navegacion .menu-listas .listas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .menu-navegacion .menu-listas .listas li {
+  list-style: none;
+  margin-right: 26px;
+}
+
+nav .menu-navegacion .menu-listas .listas li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: 'YanoneKaffeesatz-Regular';
+  font-size: 22px;
+}
+
+nav .menu-navegacion .menu-listas .listas li a:hover {
+  color: #d33030;
+}
+
+nav .menu-navegacion .menu-listas .listas .botonIntranet {
+  padding: 7px 22px;
+  border-radius: 5px;
+  border: none;
+  background-color: #da5656;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'YanoneKaffeesatz-Regular', sans-serif;
+  font-size: 17px;
+}
+
+nav .menu-navegacion .menu-listas .listas .botonIntranet:hover {
+  background-color: #d33030;
+}
+
+nav .menu-navegacion .menu-listas .listas .botonIntranet:focus {
+  outline: none;
+}
+
+/*-------------- Position fixed ---> menuNavegación JS -----------*/
+.positionFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-animation-name: animacionMenu;
+          animation-name: animacionMenu;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  background-color: #afafaf;
+}
+
+@-webkit-keyframes animacionMenu {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes animacionMenu {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=menuNavegacion.css.map */

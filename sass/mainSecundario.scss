@@ -1,0 +1,107 @@
+aside{
+    position: relative;
+    margin-top: -60px;
+    .aside{
+        background-image: url('../img/denim.png');
+        min-width: 1200px;
+        .contenedor-carreras{
+            padding-bottom: 45px;
+            .titulo{
+
+                margin-bottom: 30px;
+                h2{
+                    color: rgb(236, 236, 236);
+                    text-align: center;
+                    text-shadow: 1px 2px rgb(48, 48, 48);
+                    font-family: "YanoneKaffeesatz-Regular";
+                    font-size: 35px;
+                    border-top: 1px solid rgba(0,0,0,.3);
+                    border-bottom: 1px solid rgba(0,0,0,.3);
+                    padding: 8px 0px;
+                    -webkit-box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+                    -moz-box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+                    box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+                    width: 100%;
+                }
+            }
+            .contenedor-carreras-profesionales{
+                display: flex;
+                justify-content: space-between;
+                .carreras-profesionales{
+                    -webkit-perspective: 1100;
+                    width: 360px;
+                    height: 280px;
+                    cursor: pointer;
+                    &:hover{
+                        .carreras-opciones{
+                            transform: rotateY(-180deg);
+                        }
+                    }
+                    .carreras-opciones{
+                        position: relative;
+                        transition: all 1s ease;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        -webkit-box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+                        -moz-box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+                        box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+                        border-radius: 10px;
+                        .carrera-frontal{
+                            width: 360px;
+                            height: 280px;
+                            backface-visibility: hidden;
+                            position: relative;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 10px;
+                            }
+                            h2{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                color: rgb(235, 235, 235);
+                                background: rgb(155, 72, 72);
+                                width: 100%;
+                                text-align: center;
+                                text-shadow: 1px 3px rgb(48, 48, 48);
+                                padding: 12px 0px;
+                                font-family: 'Trocchi', serif;
+                                font-size: 24px;
+                            }
+                        }
+                        .carrera-atras{
+                            width: 360px;
+                            height: 280px;
+                            background: rgb(155, 72, 72);
+                            backface-visibility: hidden;
+                            transform: rotateY(180deg);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            border-radius: 10px;
+                            text-align: center;
+                            padding-top: 50px;
+                            h2{
+                                margin-top: 8px;
+                                text-align: center;
+                                font-size: 23px;
+                                color: white;
+                                border: 1px solid rgba(255, 255, 255, 0.4);
+                                padding: 3px 0px;
+                            }
+                            p{
+                                color: white;
+                            }
+                            button{
+                                @include styleBoton(10px 10px, 10px);
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+    }    
+}
